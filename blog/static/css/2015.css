@@ -1,0 +1,172 @@
+/* COLOR BLOTTER
+
+Dark:		#524080
+
+V. Light:	#d0c8e2
+
+*/
+
+/* --------------
+	PAGE-WIDE STUFF
+   -------------- */
+
+body {
+	color: #fff;
+	background-color: #524080;
+	background-image: url("../img/bung-ground.png");
+	background-repeat: no-repeat;
+	background-size: 1024px 640px;
+	background-position: right top;
+	text-align: center;
+	font-family: sans-serif;
+	padding: 0px;
+	margin: 0px;
+	}
+	
+div#content-wrapper {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+}
+
+a.button {
+	
+	}
+
+/* --------------
+	TITLE
+   -------------- */
+	
+h1#title {
+	font-size: 300%;
+	margin: 10px;
+	}
+	
+img#title-image {
+	width: 480px;
+	height: 270px;
+	}
+	
+div#title-block {
+	margin: auto;
+	width: 50%;
+	}
+	
+/* --------------
+	NAVIGATION BAR
+   -------------- */
+	
+div#navigation-bar {
+	margin: 0;
+	margin-bottom: 16px;
+	background-color: #d0c8e2;
+	height: 64px;
+	}
+	
+ul#navigation-bar {
+	height: 100%;
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	}
+
+ul#navigation-bar li {
+	display: block;
+	float: left;
+	height: 56px;
+	background-color: #fff;
+	margin: 0px 8px;
+	font-size: 150%;
+	text-align: center;
+	padding: 0px 32px;
+	margin-top: 8px;
+	}
+	
+ul#navigation-bar li span {
+	display: inline-block;
+	vertical-align: middle;
+	color: #524080;
+	text-decoration: none;
+	font-weight: bold;
+	}
+	
+ul#navigation-bar li:before{
+    content: '';
+    display: inline-block;
+    vertical-align: middle;
+    height: 100%;       
+}
+
+ul#navigation-bar li:hover {
+	background-color: #ddd;
+	}
+	
+div#login-box {
+	float: right;
+	height: 56px;
+	padding: 4px 16px;
+	margin: 0;
+	display: inline-block;
+	}
+	
+/* --------------
+	MAIN CONTENT
+   -------------- */
+
+div#posts {
+	padding-top: 16px;
+	padding-bottom: 16px;
+	padding-left: 5%;
+	padding-right: 5%;
+	}
+   
+div#main-content {
+	background-color: #fff;
+	text-align: left;
+	color: #524080;
+	width: 100vw;
+	margin: 0 auto;
+	padding: 0px 0px;
+	padding-top:
+	}
+	
+div#post-content {
+	border-left: 2px #d0c8e2 solid;
+	margin: 16px 24px;
+	padding: 0px 24px;
+	}
+	
+div#post-meta {
+	color: #d0c8e2;
+	font-size: 75%;
+	}
+	
+div#page-stamp {
+	margin-top: 16px;
+	width: 100%;
+	text-align: center;
+	color: #d0c8e2;
+	font-size: 75%;
+	padding-bottom: 16px;
+}
+
+/* --------------
+	   PAGEBAR
+   -------------- */
+   
+ div#pagebar {
+	text-align: center;
+	}
+	
+div#pagebar a {
+	color: #524080;
+	font-weight: bold;
+	text-decoration: none;
+	}
+	
+div#pagebar a:hover {
+	background-color: #524080;
+	color: #fff
+	}

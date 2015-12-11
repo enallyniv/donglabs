@@ -1,0 +1,51 @@
+{% load staticfiles %}
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<head>
+
+	<!-- hello everyone
+		 i am the king of the universe -->
+	
+	<title>{% block title %}Dong Labs{% endblock %}</title>
+	<meta http-equiv="Content-type" content="text/html;charset=UTF-8" />
+	<meta name="keywords" content="dong labs" />
+	<meta name="description" content="your one stop shop for dongs and laboratories" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="{% static "css/2015.css" %}"/>
+	
+</head>
+
+<body>
+
+<div id="content-wrapper">
+
+	<h1 id="title"><img id="title-image" src="{% static "img/donglabs-text.png" %}" alt="Dong Labs" /></h1>
+	
+	<div id="main-content">
+	{% block navbar %}
+		<div id="navigation-bar">
+		<ul id="navigation-bar">
+			<a href="{% url 'front-page' %}"><li><span>Home</span></li></a>
+			<a href="{% url 'post-new' %}"><li><span>Post</span></li></a>
+			<a href="{% url 'about-page' %}"><li><span>About</span></li></a>
+		</ul>
+		</div>
+	{% endblock %}
+		
+	{% block pagecontent %}
+
+	If you're not seeing anything here, something supremely fucky has happened.
+	
+	{% endblock %}
+	
+	<div id="page-stamp">Dong Labs | Layout 2015 by Vince | I have no idea what I'm doing!</div>
+	
+	</div>
+	
+</div>
+	
+</body>
+</html>

@@ -1,0 +1,33 @@
+	{% extends "blog/base.html" %}
+	
+	{% block title %} Dong Labs | Blog {% endblock %}
+
+	{% block pagecontent %}
+	
+	<div id="pagebar">
+		{% if posts.has_previous %} <a href="{% url 'post-list' 1 %}">&lt;&lt;</a> {% else %} &lt;&lt; {% endif %}
+		{% if posts.has_previous %}	<a href="{% url 'post-list' posts.previous_page_number %}">&lt;</a> {% else %} &lt; {% endif %}
+		<span id="pagebar-text">Page {{ posts.number }} of {{ paginator.num_pages }} </span> 
+		{% if posts.has_next %} <a href="{% url 'post-list' posts.next_page_number %}">&gt;</a>	{% else %} &gt;	{% endif %}
+		{% if posts.has_next %}	<a href="{% url 'post-list' paginator.num_pages %}">&gt;&gt;</a> {% else %}	&gt;&gt; {% endif %}
+	</div>
+	
+	{% for post in posts %}
+		<div id="posts">
+			<div id="post-content">
+				<h2>{{ post.title }}</h2>
+				<p>{{ post.content|linebreaks }}</p>
+				<div id="post-meta">{{ post.created_date}} | id: {{ post.id }}</div>
+			</div>
+		</div>
+	{% endfor %}
+	
+	<div id="pagebar">
+		{% if posts.has_previous %} <a href="{% url 'post-list' 1 %}">&lt;&lt;</a> {% else %} &lt;&lt; {% endif %}
+		{% if posts.has_previous %}	<a href="{% url 'post-list' posts.previous_page_number %}">&lt;</a> {% else %} &lt; {% endif %}
+		<span id="pagebar-text">Page {{ posts.number }} of {{ paginator.num_pages }} </span> 
+		{% if posts.has_next %} <a href="{% url 'post-list' posts.next_page_number %}">&gt;</a>	{% else %} &gt;	{% endif %}
+		{% if posts.has_next %}	<a href="{% url 'post-list' paginator.num_pages %}">&gt;&gt;</a> {% else %}	&gt;&gt; {% endif %}
+	</div>
+	
+	{% endblock pagecontent %}

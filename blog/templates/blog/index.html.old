@@ -1,0 +1,58 @@
+{% load staticfiles %}
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<head>
+
+	<!-- hello everyone
+		 i am the king of the universe -->
+	
+	<title>Dong Labs</title>
+	<meta http-equiv="Content-type" content="text/html;charset=UTF-8" />
+	<meta name="keywords" content="dong labs" />
+	<meta name="description" content="your one stop shop for dongs and laboratories" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="{% static "css/2015.css" %}"/>
+	
+</head>
+
+<body>
+
+<div id="content-wrapper">
+
+	<h1 id="title"><img id="title-image" src="{% static "img/donglabs-text.png" %}" alt="Dong Labs" /></h1>
+	
+	<div id="main-content">
+		
+		<div id="navigation-bar">
+		<ul id="navigation-bar">
+			<a href="home"><li><span>Home</span></li></a>
+			<a href="post"><li><span>Post</span></li></a>
+			<a href="about"><li><span>About</span></li></a>
+		</ul>
+		</div>
+		
+	<div id="pagebar">&lt;&lt; &lt; <span id="pagebar-text">Page 1 of 2</span> &gt; &gt;&gt;</div>
+	
+	{% for post in posts %}
+		<div id="posts">
+			<div id="post-content">
+				<h2>{{ post.title }}</h2>
+				<p>{{ post.content }}</p>
+				<div id="post-meta">{{ post.created_date}} | id: {{ post.id }}</div>
+			</div>
+		</div>
+	{% endfor %}
+	
+	<div id="pagebar">&lt;&lt; &lt; <span id="pagebar-text">Page 1 of 2</span> &gt; &gt;&gt;</div>
+	
+	<div id="page-stamp">Dong Labs | Layout 2015 by Vince | I have no idea what I'm doing!</div>
+	
+	</div>
+	
+</div>
+	
+</body>
+</html>
