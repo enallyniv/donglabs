@@ -14,7 +14,8 @@
 	<meta name="keywords" content="dong labs" />
 	<meta name="description" content="your one stop shop for dongs and laboratories" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" type="text/css" href="{% static "css/2015.css" %}"/>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/2015.css' %}" />
+	<link rel="icon" type="image/png" href="{% static 'img/favicon.png' %}" />
 	
 </head>
 
@@ -29,7 +30,7 @@
 		<div id="navigation-bar">
 		<ul id="navigation-bar">
 			<a href="{% url 'front-page' %}"><li><span>Home</span></li></a>
-			<a href="{% url 'post-new' %}"><li><span>Post</span></li></a>
+			<a href="{% url 'submit-post' %}"><li><span>Submit</span></li></a>
 			<a href="{% url 'about-page' %}"><li><span>About</span></li></a>
 		</ul>
 		</div>

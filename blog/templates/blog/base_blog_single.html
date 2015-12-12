@@ -1,0 +1,15 @@
+	{% extends "blog/base.html" %}
+	
+	{% block title %} Dong Labs | Viewing single post {{ singlepost.id }} {% endblock %}
+
+	{% block pagecontent %}
+	
+		<div id="posts">
+			<div id="post-content">
+				<h2>{{ singlepost.title }}</h2>
+				<p>{{ singlepost.content|linebreaks }}</p>
+				<div id="post-meta">{{ singlepost.created_date}} | id: {{ singlepost.id }}</div>
+			</div>
+		</div>
+	
+	{% endblock pagecontent %}
