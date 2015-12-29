@@ -140,6 +140,11 @@ div#post-content {
 	padding: 0px 24px;
 	}
 	
+form#submit-box {
+	padding-left: 16px;
+	border-top: 1px solid #d0c8e2;
+	}
+	
 div#post-meta {
 	color: #d0c8e2;
 	font-size: 75%;
@@ -163,7 +168,7 @@ div#page-stamp {
 	padding-bottom: 16px;
 	}
 
-h2 {
+h2,h3 {
 	font-family: Lora, "Times New Roman", Times, serif;
 	}
 

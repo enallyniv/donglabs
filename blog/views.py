@@ -2,11 +2,11 @@ from django.shortcuts import render, get_object_or_404
 from django.utils import timezone
 from blog.models import Post
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
+from .forms import SubmitForm
 
 # For the main view just shit out the first page of the post list.
 
 def post_list_main(request):
-
     return post_list(request, 1)
 
 # Main page post list.
@@ -30,15 +30,14 @@ def post_list(request, pagenumber):
 
 def view_single(request, postnumber):
     singlepost = get_object_or_404(Post, pk=postnumber)
-    
     return render(request, 'blog/base_blog_single.html', {'singlepost': singlepost, })
  
 
 # Post page
 
 def submit_post(request):
-    return render(request, 'blog/base_submit.html', {})
-
+    form = SubmitForm()
+    return render(request, 'blog/base_submit.html', {'form': form})
 
 # About page
         

@@ -4,6 +4,17 @@
 
 	{% block pagecontent %}
 	
-	<div>NOT RIGHT NOW MOTHERFUCKER</div>
+	<div id="posts" method="POST">
+		<h2>Submit New Post</h2>
+		<form id="submit-box">
+			{% csrf_token %}
+			{{ form.as_p }}
+		
+<!--		<h3>Title</h3>
+			<p>box here</p>
+		<h3>Content</h3>
+			<p>other box here</p>-->
+		</form>
+	</div>
 	
 	{% endblock pagecontent %}
