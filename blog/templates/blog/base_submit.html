@@ -4,11 +4,21 @@
 
 	{% block pagecontent %}
 	
-	<div id="posts" method="POST">
-		<h2>Submit New Post</h2>
-		<form id="submit-box">
+	<div id="posts">
+		<h2>Post A Thing</h2>
+		<form id="submit-box" method="POST">
 			{% csrf_token %}
-			{{ form.as_p }}
+			<div id="submit-box">
+				<label>{{ form.title.label }}</label><br />
+				{{ form.title }}
+			</div>
+			
+			<div id="submit-box">
+				<label>{{ form.content.label }}</label><br />
+				{{ form.content }}
+			</div>
+			
+			<button type="submit">Fuck</button>
 		
 <!--		<h3>Title</h3>
 			<p>box here</p>

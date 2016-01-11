@@ -140,11 +140,6 @@ div#post-content {
 	padding: 0px 24px;
 	}
 	
-form#submit-box {
-	padding-left: 16px;
-	border-top: 1px solid #d0c8e2;
-	}
-	
 div#post-meta {
 	color: #d0c8e2;
 	font-size: 75%;
@@ -192,6 +187,49 @@ div#pagebar a:hover {
 	}
 	
 /* --------------
+	  POST BOX
+   -------------- */
+   
+form#submit-box {
+	padding: 16px;
+	border-top: 1px solid #d0c8e2;
+	}
+	
+div#submit-box {
+	padding-bottom: 8px;
+	}
+	
+input, textarea {
+	border: 1px #524080 solid;
+	width: 80%;
+	}
+
+label {
+	font-family: Lora;
+	font-size: 125%;
+	font-weight: bold;
+	}
+	
+button {
+	border: 1px #524080 solid;
+	color: #fff;
+	background-color: #524080;
+	font-size: 125%;
+	font-family: Lora;
+	font-weight: bold;
+	padding: 8px 24px;
+	}
+
+button:hover {
+	background-color: #fff;
+	color: #524080;
+	}
+	
+button:active {
+	background-color: #d0c8e2;
+	}
+	
+/* --------------
 	 FONTAZOIDS
    -------------- */
    
@@ -220,8 +258,3 @@ div#pagebar a:hover {
 	font-weight: bold;
 	font-style: italic;
 	}
-	
-/* --------------
-	  POST BOX
-   -------------- */
-
